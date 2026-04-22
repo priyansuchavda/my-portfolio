@@ -19,17 +19,13 @@ function Resume() {
   useEffect(() => {
     setIsClient(true);
     setWidth(window.innerWidth);
-    
-    // Set up PDF worker from public folder
-    if (typeof window !== 'undefined') {
-      import('pdfjs-dist').then((pdfWorker) => {
-        pdfWorker.GlobalWorkerOptions.workerSrc = '/pdf.worker.min.js';
-      });
-    }
-    
-    const handleResize = () => {
-      setWidth(window.innerWidth);
-    };
+
+    // Import pdfjs only on client side
+    import("react-pdf").then((mod) => {
+      mod.pdfjs.GlobalWorkerOptions.workerSrc = "/pdf.worker.min.js";
+    });
+
+    const handleResize = () => setWidth(window.innerWidth);
 
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
@@ -39,9 +35,7 @@ function Resume() {
     setNumPages(numPages);
   };
 
-  if (!isClient) {
-    return null;
-  }
+  if (!isClient) return null;
 
   return (
     <div className={styles.resumeContainer}>
