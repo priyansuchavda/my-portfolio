@@ -1,0 +1,126 @@
+.about {
+  padding-bottom: var(--section-padding);
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  gap: 100px;
+}
+
+.left {
+  flex: 1;
+}
+
+.sectionTitle {
+  font-size: 3rem;
+  margin-bottom: 32px;
+}
+
+.overview {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 32px;
+}
+
+.overviewText {
+  font-size: 1.15rem;
+  color: #fff;
+  line-height: 1.8;
+  margin: 0;
+  font-weight: 500;
+}
+
+.text {
+  font-size: 1.1rem;
+  color: var(--muted);
+  margin-bottom: 24px;
+  line-height: 1.8;
+}
+
+.stats {
+  display: flex;
+  gap: 40px;
+  margin-top: 48px;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+}
+
+.statNumber {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--primary-light);
+  font-family: var(--font-heading);
+}
+
+.statLabel {
+  font-size: 0.9rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-top: 4px;
+}
+
+.right {
+  flex: 0.8;
+  display: flex;
+  justify-content: center;
+}
+
+.profileWrapper {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+}
+
+.profileWrapper::before {
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 100%;
+  height: 100%;
+  border: 2px solid var(--primary);
+  border-radius: 24px;
+  z-index: 1;
+}
+
+.profileImg {
+  width: 100%;
+  height: auto;
+  border-radius: 24px;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 1024px) {
+  .container {
+    gap: 60px;
+  }
+  
+  .sectionTitle {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .stats {
+    justify-content: center;
+    gap: 30px;
+  }
+  
+  .right {
+    margin-top: 60px;
+  }
+}

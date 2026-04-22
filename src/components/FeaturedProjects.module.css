@@ -1,0 +1,50 @@
+.projects {
+  padding: var(--section-padding) 0;
+}
+
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 80px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.sectionTitle {
+  font-size: 3.5rem;
+  margin-bottom: 16px;
+  font-weight: 800;
+}
+
+.sectionSubtitle {
+  font-size: 1.2rem;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 60px;
+}
+
+@media (max-width: 1024px) {
+  .sectionTitle {
+    font-size: 3rem;
+  }
+  
+  .grid {
+    gap: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .sectionTitle {
+    font-size: 2.5rem;
+  }
+}
