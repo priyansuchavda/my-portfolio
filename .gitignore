@@ -20,3 +20,6 @@ npm-debug.log*
 # PDFs (ignore all except one)
 *.pdf
 !public/resume.pdf
+
+# Keep PDF worker for production builds
+!public/pdf.worker.min.js

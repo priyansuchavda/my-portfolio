@@ -20,13 +20,10 @@ function Resume() {
     setIsClient(true);
     setWidth(window.innerWidth);
     
-    // Set up PDF worker from pdfjs-dist package
+    // Set up PDF worker from public folder
     if (typeof window !== 'undefined') {
       import('pdfjs-dist').then((pdfWorker) => {
-        pdfWorker.GlobalWorkerOptions.workerSrc = new URL(
-          'pdfjs-dist/build/pdf.worker.min.js',
-          import.meta.url,
-        ).toString();
+        pdfWorker.GlobalWorkerOptions.workerSrc = '/pdf.worker.min.js';
       });
     }
     
