@@ -38,10 +38,10 @@ const About = () => {
         </div>
         <div className={styles.right}>
           <div className={styles.profileWrapper}>
-            <Image 
-              src="/profile.png" 
-              alt="Priyanshu Chavda" 
-              width={400} 
+            <Image
+              src="/profile.png"
+              alt="Priyanshu Chavda"
+              width={400}
               height={400}
               className={styles.profileImg}
             />
