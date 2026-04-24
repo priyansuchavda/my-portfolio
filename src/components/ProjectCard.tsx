@@ -9,7 +9,7 @@ interface ProjectProps {
   description: string;
   image?: string;
   tags: string[];
-  liveLink: string;
+  liveLink?: string;
   githubLink?: string;
   features?: string[];
 }
@@ -36,7 +36,7 @@ const ProjectCard = ({ title, description, image, tags, liveLink, githubLink, fe
           ))}
         </div>
         <div className={styles.buttons}>
-          <a href={liveLink} target="_blank" rel="noopener noreferrer" className="btn btn-primary btn-sm">Live Demo</a>
+          {liveLink && <a href={liveLink} target="_blank" rel="noopener noreferrer" className="btn btn-primary btn-sm">Live Demo</a>}
           {githubLink && <a href={githubLink} target="_blank" rel="noopener noreferrer" className="btn btn-outline btn-sm">GitHub</a>}
         </div>
       </div>

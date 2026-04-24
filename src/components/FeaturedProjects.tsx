@@ -3,9 +3,9 @@ import styles from './FeaturedProjects.module.css';
 
 const featuredProjects = [
   {
-    title: "DiscountBuddy  (Client Project)",
+    title: "DiscountBuddy (Client Project)",
     description: "A smart deals and savings app that helps users discover the best discounts, coupons, and offers from multiple brands and stores in one place.",
-    tags: ["Flutter", "Django rest framework", "PostgreSQL", "AWS","REST APIs","App Deployment"],
+    tags: ["Flutter", "Django rest framework", "PostgreSQL", "AWS", "REST APIs", "App Deployment"],
     features: [
       "Developed a cross-platform mobile application using Flutter with Django REST Framework backend",
       "Contributed to backend development in Django, including API integration and data management",
@@ -15,6 +15,31 @@ const featuredProjects = [
       "Contributed to AWS deployment, server hosting, and production environment management"
     ],
     liveLink: "https://play.google.com/store/apps/details?id=com.discountbuddy.app"
+  },
+  {
+    title: "ChitChat (Personal Project)",
+    description: "A real-time chat application designed for seamless and secure communication with a clean, minimal user experience.",
+    tags: ["Flutter", "Django", "Django Channels", "JWT Authentication", "WebSockets", "REST APIs"],
+    features: [
+      "Developed a cross-platform mobile chat application using Flutter with a Django backend",
+      "Implemented real-time messaging using WebSocket connections (Django Channels)",
+      "Built JWT-based authentication for secure user access and session handling",
+      "Designed and managed socket connection lifecycle, including connection handling and message broadcasting",
+      "Created a simple, intuitive, and responsive UI focused on casual conversations",
+      "Developed REST APIs for user management and chat-related operations"
+    ]
+  },
+  {
+    title: "InvoiceGen (Real-World Problem Solution)",
+    description: "A custom invoice generation system built to solve inefficiencies in manual invoice creation for small businesses.",
+    tags: ["Flutter", "PDF Generation"],
+    features: [
+      "Identified a real-world problem where business owners repeatedly created invoices manually using tools like Canva, leading to time loss and inconsistency",
+      "Designed a reusable invoice template system with pre-filled company details and dynamic input fields",
+      "Enabled one-click PDF generation and instant sharing functionality for faster client communication",
+      "Automated repetitive workflow, reducing invoice creation time from minutes to seconds",
+      "Built a clean and user-friendly interface requiring minimal user input"
+    ]
   }
 ];
 
