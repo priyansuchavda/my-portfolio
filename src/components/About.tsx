@@ -15,17 +15,20 @@ const About = () => {
           <h2 className={styles.sectionTitle}>About Me</h2>
           <div className={styles.overview}>
             <p className={styles.overviewText}>
-              I'm a Full Stack Developer passionate about building scalable mobile and web applications that solve real-world problems. I specialize in developing modern products using Flutter, Django, React, and REST APIs, with a strong focus on performance, clean architecture, and user experience.
+              I’m a Full Stack Developer with 2+ years of hands-on experience building mobile and web applications using Flutter, Django, and React.
             </p>
           </div>
           <p className={styles.text}>
-            I have worked on diverse projects ranging from consumer mobile apps to business management systems, handling everything from frontend interfaces to backend APIs, deployment, and production releases.
+            I focus on solving practical problems — from streamlining business workflows to building real-time data-driven applications. For example, I built a custom invoice system that eliminated repetitive manual design work, reducing invoice generation time from minutes to seconds.
           </p>
           <p className={styles.text}>
-            My approach is centered around writing maintainable code, creating responsive and intuitive user interfaces, and delivering reliable solutions that provide real value.
+            I’ve developed and deployed multiple production-ready applications, handling everything from UI development to backend APIs, database design, and cloud deployment.
           </p>
           <p className={styles.text}>
-            Currently, I'm open to freelance opportunities and full-time roles where I can contribute, grow, and collaborate with talented teams.
+            My strength lies in building fast, reliable, and maintainable systems with clean architecture and a strong focus on user experience — not just writing code, but delivering usable products.
+          </p>
+          <p className={styles.text}>
+            Currently, I’m looking for freelance or full-time opportunities where I can work on challenging problems, ship real products, and continue improving as an engineer.
           </p>
           <div className={styles.stats}>
             {stats.map((stat, index) => (
@@ -39,7 +42,7 @@ const About = () => {
         <div className={styles.right}>
           <div className={styles.profileWrapper}>
             <Image
-              src="/profile.png"
+              src="/me.png"
               alt="Priyanshu Chavda"
               width={400}
               height={400}
