@@ -30,7 +30,7 @@ const Hero = () => {
           transition={{ duration: 0.6, delay: 0.4 }}
           className={styles.ctas}
         >
-          <a href="#projects" className="btn btn-primary">View Projects</a>
+          <a href="projects" className="btn btn-primary">View Projects</a>
           <a href="#contact" className="btn btn-outline">Contact Me</a>
         </motion.div>
       </div>
