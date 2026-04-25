@@ -52,7 +52,22 @@
 }
 
 @media (max-width: 768px) {
+  .contact {
+    padding: 80px 20px;
+  }
+
   .title {
-    font-size: 2rem;
+    font-size: 2.25rem;
+  }
+
+  .subtext {
+    font-size: 1rem;
+    margin-bottom: 32px;
+  }
+
+  .links {
+    flex-wrap: wrap;
+    gap: 24px;
   }
 }
+

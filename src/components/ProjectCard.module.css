@@ -110,10 +110,32 @@
 
 @media (max-width: 768px) {
   .content {
-    padding: 24px;
+    padding: 20px;
   }
   
   .title {
-    font-size: 1.5rem;
+    font-size: 1.35rem;
+  }
+
+  .description {
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+  }
+
+  .features li {
+    font-size: 0.85rem;
+    line-height: 1.4;
+    margin-bottom: 8px;
+  }
+
+  .tags {
+    gap: 8px;
+    margin-bottom: 24px;
+  }
+
+  .tag {
+    padding: 4px 10px;
+    font-size: 0.75rem;
   }
 }
+

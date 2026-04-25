@@ -111,16 +111,52 @@
 
 @media (max-width: 768px) {
   .container {
-    flex-direction: column;
+    flex-direction: column-reverse;
     text-align: center;
+    gap: 40px;
+  }
+  
+  .sectionTitle {
+    font-size: 2.25rem;
+    margin-bottom: 24px;
+  }
+
+  .overview {
+    padding: 20px;
+    margin-bottom: 24px;
+  }
+
+  .overviewText {
+    font-size: 1.05rem;
+  }
+
+  .text {
+    font-size: 1rem;
   }
   
   .stats {
-    justify-content: center;
-    gap: 30px;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    margin-top: 32px;
   }
   
+  .statNumber {
+    font-size: 2rem;
+  }
+
   .right {
-    margin-top: 60px;
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+
+  .profileWrapper {
+    max-width: 280px;
+  }
+
+  .profileWrapper::before {
+    top: 10px;
+    left: 10px;
   }
 }
+
