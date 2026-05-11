@@ -28,8 +28,9 @@ const Navbar = () => {
 
         <ul className={`${styles.navLinks} ${isOpen ? styles.open : ''}`}>
           <li><Link href="/" onClick={() => setIsOpen(false)}>Home</Link></li>
-          <li><Link href="/projects" onClick={() => setIsOpen(false)}>Projects</Link></li>
           <li><Link href="/about" onClick={() => setIsOpen(false)}>About</Link></li>
+          <li><Link href="/#skills" onClick={() => setIsOpen(false)}>Skills</Link></li>
+          <li><Link href="/projects" onClick={() => setIsOpen(false)}>Projects</Link></li>
           <li><Link href="/resume" onClick={() => setIsOpen(false)}>Resume</Link></li>
           <li>
             <Link 

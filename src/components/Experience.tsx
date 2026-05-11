@@ -3,8 +3,18 @@ import styles from './Experience.module.css';
 const experiences = [
   {
     role: "Full Stack Developer",
-    company: "DiscountBuddy (Client Project)",
-    duration: "Dec 2025 – Present",
+    company: "16Arena Labs",
+    duration: "Apr 2026 – Present · 1 mo",
+    achievements: [
+      "Leading the development of the 16Arena ecosystem, focusing on scalable tournament management systems",
+      "Architecting real-time features and optimizing application performance across mobile and web platforms",
+      "Collaborating with cross-functional teams to deliver high-quality features and improve user engagement"
+    ]
+  },
+  {
+    role: "Full Stack Developer",
+    company: "DiscountBuddy (Freelancing)",
+    duration: "Dec 2025 – Present · 5 mos",
     achievements: [
       "Developed a restaurant discovery and live deals platform with QR-based offer redemption and table reservations",
       "Built role-based dashboards using Django and PostgreSQL for efficient restaurant management",
@@ -12,29 +22,29 @@ const experiences = [
     ]
   },
   {
-    role: "Flutter Developer",
-    company: "MetaNinza",
-    duration: "Aug 2025 – Present",
+    role: "Full Stack Developer",
+    company: "16score · Full-time",
+    duration: "Apr 2025 – Present · 1 yr 1 mo",
     achievements: [
-      "Developed 16Arena, a Flutter-based tournament management application",
+      "Contributed to 16Score, an esports platform providing live scores and match statistics",
+      "Developed end-to-end features for live score updates, match stats, and complex API integrations",
+      "Improved UI responsiveness and backend application performance"
+    ]
+  },
+  {
+    role: "Full Stack Developer",
+    company: "MetaNinza · Full-time",
+    duration: "Aug 2025 – Apr 2026 · 9 mos",
+    achievements: [
+      "Developed 16Arena, a Flutter-based tournament management application with a Django backend",
       "Implemented features like tournament management, shop module, real-time chat, and push notifications",
       "Built interconnected systems for organizations, teams, and users with real-time data handling"
     ]
   },
   {
-    role: "Flutter Developer",
-    company: "16Score",
-    duration: "Apr 2025 – Present",
-    achievements: [
-      "Contributed to 16Score, an esports platform providing live scores and match statistics",
-      "Developed Flutter features for live score updates, match stats, and API integrations",
-      "Improved UI responsiveness and application performance"
-    ]
-  },
-  {
-    role: "Full Stack Developer Intern",
-    company: "Bluexkye Softwares",
-    duration: "Feb 2025 – Aug 2025",
+    role: "Full Stack Developer",
+    company: "Bluexkye",
+    duration: "Feb 2025 – Apr 2025 · 3 mos",
     achievements: [
       "Worked with React, Django, MySQL, and PostgreSQL to build web applications",
       "Developed frontend components, backend APIs, and database models",
@@ -43,11 +53,15 @@ const experiences = [
   }
 ];
 
+
+
+
 const Experience = () => {
   return (
-    <section className={styles.experience}>
-      <h2 className={styles.sectionTitle}>Work Experience</h2>
+    <section id="experience" className={styles.experience}>
+      <h2 className={styles.sectionTitle}>Experience</h2>
       <div className={styles.timeline}>
+
         {experiences.map((exp, index) => (
           <div key={index} className={styles.item}>
             <div className={styles.dot}></div>
