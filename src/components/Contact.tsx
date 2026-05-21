@@ -17,7 +17,7 @@ const Contact = () => {
             <Mail size={24} />
             <span>Email Me</span>
           </a>
-          <a href="www.linkedin.com/in/priyanshu-chavda" target="_blank" rel="noopener noreferrer" className={styles.link}>
+          <a href="https://www.linkedin.com/in/priyanshu-chavda" target="_blank" rel="noopener noreferrer" className={styles.link}>
             <FaLinkedin size={24} />
             <span>LinkedIn</span>
           </a>
