@@ -1,13 +1,29 @@
 "use client";
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import styles from './Navbar.module.css';
+
+const navItems = [
+  { href: '/', label: 'Home' },
+  { href: '/about', label: 'About' },
+  { href: '/#skills', label: 'Skills' },
+  { href: '/projects', label: 'Projects' },
+  { href: '/resume', label: 'Resume' },
+];
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const toggleMenu = () => setIsOpen(!isOpen);
+  const closeMenu = () => setIsOpen(false);
+  const toggleMenu = () => setIsOpen((open) => !open);
+
+  useEffect(() => {
+    document.body.style.overflow = isOpen ? 'hidden' : '';
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [isOpen]);
 
   return (
     <nav className={styles.navbar}>
@@ -16,37 +32,72 @@ const Navbar = () => {
           <Link href="/">PRIYANSU</Link>
         </div>
 
-        <button 
-          className={`${styles.menuToggle} ${isOpen ? styles.active : ''}`} 
+        <button
+          className={`${styles.menuToggle} ${isOpen ? styles.menuToggleHidden : ''}`}
           onClick={toggleMenu}
-          aria-label="Toggle menu"
+          aria-label="Open menu"
+          aria-expanded={isOpen}
         >
           <span></span>
           <span></span>
           <span></span>
         </button>
 
-        <ul className={`${styles.navLinks} ${isOpen ? styles.open : ''}`}>
-          <li><Link href="/" onClick={() => setIsOpen(false)}>Home</Link></li>
-          <li><Link href="/about" onClick={() => setIsOpen(false)}>About</Link></li>
-          <li><Link href="/#skills" onClick={() => setIsOpen(false)}>Skills</Link></li>
-          <li><Link href="/projects" onClick={() => setIsOpen(false)}>Projects</Link></li>
-          <li><Link href="/resume" onClick={() => setIsOpen(false)}>Resume</Link></li>
+        <ul className={styles.navLinks}>
+          {navItems.map((item) => (
+            <li key={item.href}>
+              <Link href={item.href}>{item.label}</Link>
+            </li>
+          ))}
           <li>
-            <Link 
-              href="/#contact" 
-              className={styles.contactBtn}
-              onClick={() => setIsOpen(false)}
-            >
+            <Link href="/#contact" className={styles.contactBtn}>
               Contact
             </Link>
           </li>
         </ul>
       </div>
-      {isOpen && <div className={styles.overlay} onClick={() => setIsOpen(false)}></div>}
+
+      <div
+        className={`${styles.mobileMenu} ${isOpen ? styles.mobileMenuOpen : ''}`}
+        aria-hidden={!isOpen}
+      >
+        <div className={styles.mobileMenuHeader}>
+          <span className={styles.mobileMenuLabel}>Menu</span>
+          <button
+            type="button"
+            className={styles.closeBtn}
+            onClick={closeMenu}
+            aria-label="Close menu"
+          >
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+
+        <ul className={styles.mobileNavLinks}>
+          {navItems.map((item) => (
+            <li key={item.href}>
+              <Link href={item.href} onClick={closeMenu}>
+                {item.label}
+              </Link>
+            </li>
+          ))}
+        </ul>
+
+        <div className={styles.mobileMenuFooter}>
+          <Link href="/#contact" className={styles.mobileContactBtn} onClick={closeMenu}>
+            Contact Me
+          </Link>
+        </div>
+      </div>
+
+      <div
+        className={`${styles.overlay} ${isOpen ? styles.overlayVisible : ''}`}
+        onClick={closeMenu}
+        aria-hidden={!isOpen}
+      />
     </nav>
   );
 };
 
 export default Navbar;
-

@@ -92,8 +92,8 @@
 
 @media (max-width: 768px) {
   .skillsGrid {
-    grid-template-columns: 1fr;
-    gap: 30px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
   }
   
   .header {
@@ -102,6 +102,19 @@
 
   .sectionTitle {
     font-size: 2.25rem;
+  }
+
+  .categoryTitle {
+    font-size: 0.9rem;
+    margin-bottom: 14px;
+  }
+
+  .skillList {
+    gap: 10px;
+  }
+
+  .skillItem {
+    font-size: 0.85rem;
   }
 }
 

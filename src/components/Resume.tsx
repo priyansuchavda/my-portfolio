@@ -68,17 +68,6 @@ function Resume() {
           ))}
         </Document>
       </div>
-
-      <div className={styles.footer}>
-        <a
-          href="/resume.pdf"
-          download="Priyanshu_Chavda_Resume.pdf"
-          className={styles.downloadBtn}
-        >
-          <AiOutlineDownload />
-          <span>Download CV</span>
-        </a>
-      </div>
     </div>
   );
 }
