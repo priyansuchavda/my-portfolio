@@ -12,13 +12,14 @@ interface ProjectProps {
   liveLink?: string;
   githubLink?: string;
   features?: string[];
+  compact?: boolean;
 }
 
-const ProjectCard = ({ title, description, image, tags, liveLink, githubLink, features }: ProjectProps) => {
+const ProjectCard = ({ title, description, image, tags, liveLink, githubLink, features, compact }: ProjectProps) => {
   return (
-    <motion.div 
-      whileHover={{ y: -10, scale: 1.02 }}
-      className={styles.card}
+    <motion.div
+      whileHover={compact ? undefined : { y: -10, scale: 1.02 }}
+      className={`${styles.card} ${compact ? styles.compact : ''}`}
     >
       <div className={styles.content}>
         <h3 className={styles.title}>{title}</h3>

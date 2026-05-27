@@ -1,10 +1,23 @@
 .projects {
-  padding: var(--section-padding) 0;
+  padding: var(--section-padding) 40px;
+  max-width: 1280px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.sectionWrapper {
+  width: 100%;
+  margin: 0 auto 100px;
+}
+
+.sectionWrapper:last-child {
+  margin-bottom: 0;
 }
 
 .sectionHeader {
   text-align: center;
-  margin-bottom: 80px;
+  margin-bottom: 60px;
   max-width: 700px;
   margin-left: auto;
   margin-right: auto;
@@ -22,19 +35,127 @@
   line-height: 1.6;
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 60px;
+.carousel {
+  position: relative;
+  width: 100%;
+}
+
+.viewport {
+  overflow-x: hidden;
+  overflow-y: visible;
+  width: 100%;
+  padding: 12px 6px 20px;
+  margin: -12px -6px -20px;
+}
+
+.track {
+  display: flex;
+  gap: 24px;
+  transition: transform 0.55s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform;
+  padding: 4px 0;
+}
+
+.cardSlide {
+  flex-shrink: 0;
+  min-width: 0;
+  padding: 4px 2px;
+}
+
+.cardSlide > div {
+  height: 100%;
+}
+
+.scrollBtn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 50%;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 1.35rem;
+  font-weight: 300;
+  line-height: 1;
+  cursor: pointer;
+  transition: border-color 0.25s ease, color 0.25s ease, background 0.25s ease;
+  box-shadow: none;
+  backdrop-filter: none;
+}
+
+.scrollBtnLeft {
+  left: -12px;
+}
+
+.scrollBtnRight {
+  right: -12px;
+}
+
+.scrollBtn:hover {
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(255, 255, 255, 0.55);
+  color: #fff;
+  box-shadow: none;
+}
+
+.scrollBtn:active {
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.scrollIcon {
+  width: 20px;
+  height: 20px;
+}
+
+.dots {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 28px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+  padding: 0;
+  transition: all 0.3s ease;
+}
+
+.dotActive {
+  background: var(--primary);
+  width: 24px;
+  border-radius: 4px;
+}
+
+@media (max-width: 1200px) {
+  .sectionTitle {
+    font-size: 3rem;
+  }
 }
 
 @media (max-width: 1024px) {
   .sectionTitle {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
-  
-  .grid {
-    gap: 40px;
+
+  .scrollBtn {
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    min-height: 44px;
+    font-size: 1.5rem;
   }
 }
 
@@ -43,23 +164,57 @@
     padding-top: 100px;
   }
 
-  .grid {
-    grid-template-columns: 1fr;
-    gap: 32px;
+  .projects {
+    padding: 100px 16px 80px;
   }
 
-  
-  .sectionTitle {
-    font-size: 2.25rem;
-    margin-bottom: 12px;
+  .sectionWrapper {
+    margin-bottom: 60px;
+  }
+
+  .scrollBtnLeft {
+    left: 0;
+  }
+
+  .scrollBtnRight {
+    right: 0;
+  }
+
+  .carousel {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .viewport {
+    overflow: visible;
+  }
+
+  .track {
+    flex-direction: column;
+    gap: 32px;
+    transform: none !important;
+  }
+
+  .cardSlide {
+    flex-basis: auto !important;
+    width: 100%;
+  }
+
+  .scrollBtn,
+  .dots {
+    display: none;
   }
 
   .sectionHeader {
     margin-bottom: 48px;
   }
 
+  .sectionTitle {
+    font-size: 2.25rem;
+    margin-bottom: 12px;
+  }
+
   .sectionSubtitle {
     font-size: 1rem;
   }
 }
-
