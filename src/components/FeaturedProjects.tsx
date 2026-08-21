@@ -12,9 +12,28 @@ export type Project = {
   liveLink?: string;
   githubLink?: string;
   image?: string;
+  previewImages?: { title: string; src: string }[];
 };
 
 const featuredProjects: Project[] = [
+  {
+    title: "GitHub Organization & Activity Tracker",
+    description: "Enterprise-grade full-stack analytics dashboard that tracks commits across all branches, pull request lifecycles, code reviews, diffs, and developer velocity in real time.",
+    tags: ["React", "Node.js", "Express", "TypeScript", "Tailwind CSS", "Prisma", "PostgreSQL", "Octokit"],
+    features: [
+      "Built a real-time developer activity dashboard tracking commits (all branches), PR creation/merge events, and code reviews",
+      "Implemented 1-click GitHub PAT authentication and Enterprise GitHub App webhook integration",
+      "Designed a high-performance dark-theme UI with interactive multi-axis velocity timeline charts (Recharts)",
+      "Architected dual storage engine (PostgreSQL + Prisma ORM) with local fallback and zero-downtime static demo mode (/static)",
+      "Added advanced multi-filter system (date range, developer, repository, branch, activity type)"
+    ],
+    previewImages: [
+      { title: "Overview", src: "/previews/overview-tab.png" },
+      { title: "Employees", src: "/previews/employees-tab.png" },
+      { title: "Repositories", src: "/previews/repositories-tab.png" },
+      { title: "Activity Feed", src: "/previews/activity-tab.png" },
+    ]
+  },
   {
     title: "DiscountBuddy (Client Project)",
     description: "A smart deals and savings app that helps users discover the best discounts, coupons, and offers from multiple brands and stores in one place.",
