@@ -128,11 +128,34 @@ const companyProjects: Project[] = [
       "Built a tournament management system with bracket generation, match scheduling, and leaderboard updates.",
       "Implemented real-time online status and chat synchronization using WebSocket technology.",
       "Integrated HTML5 games inside the app using WebView with session handling and score submission.",
+      "Built an in-app shop experience with product catalog, cart, and Razorpay payment integration for gift cards and vouchers.",
       "Redesigned the app UI with a modern and responsive layout for better user experience.",
       "Improved app performance and navigation using GetX state management.",
       "Integrated monetization features such as offerwalls and wallet balance management."
     ],
     liveLink: "https://play.google.com/store/apps/details?id=com.sixteenarena.app"
+  },
+  {
+    title: "16Arena Shop",
+    description: "E-commerce platform for gift cards, vouchers, and product checkout within the 16Arena ecosystem.",
+    tags: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Razorpay",
+      "Zustand",
+      "Tailwind CSS",
+      "Playwright"
+    ],
+    features: [
+      "Built a production e-commerce storefront with real-time product catalogs, category browsing, and live inventory updates.",
+      "Implemented end-to-end checkout with Razorpay payments, quote preview, multi-item cart, and buy-now flows.",
+      "Developed order, invoice, and transaction management with downloadable invoices and gift card redemption.",
+      "Architected a feature-driven Next.js app with secure auth (OTP + session), CSRF protection, and HttpOnly token handling.",
+      "Optimized performance with ISR caching, image optimization, and SEO improvements for high-traffic shop pages.",
+      "Covered critical purchase flows with Vitest unit tests and 138 Playwright E2E tests for reliable releases."
+    ],
+    liveLink: "https://shop.16arena.com"
   }
 ];
 
